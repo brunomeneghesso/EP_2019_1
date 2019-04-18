@@ -33,9 +33,13 @@ def carregar_cenarios():
             "titulo": "Caverna da tranquilidade",
             "descricao": "Voce esta na biblioteca",
             "opcoes": {
-                "inicio": "Voltar para o saguao de entrada"
+                "inicio": "Voltar para o saguao de entrada",
+                "ler um livro": "estudar para d-soft"
             }
-        }
+        },
+            "ler um livro":{
+                "titulo": "sala teletransporte",
+                "descricao": "voce encontrou sala de teletransporte, daqui voce pode escolher qualquer lugar para ir, parabéns"}
     }
     nome_cenario_atual = "inicio"
     return cenarios, nome_cenario_atual
@@ -54,33 +58,47 @@ def main():
     print()
 
     cenarios, nome_cenario_atual = carregar_cenarios()
-
+    
     game_over = False
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
-
         # Aluno A: substitua este comentário pelo código para imprimir 
-        # o cenário atual.
 
-        opcoes = cenario_atual['opcoes']
-        if len(opcoes) == 0:
-            print("Acabaram-se suas opções! Mwo mwo mwooooo...")
-            game_over = True
+        
+        print(cenario_atual["titulo"])
+        print("-"*len(cenario_atual["titulo"]))
+        print(cenario_atual["descricao"])
+        
+        """
+        titulo
+        ----
+        descricao
+        """
+        if nome_cenario_atual=="ler um livro":
+                nome_cenario_atual=input("escolha um lugar do insper para ir ")
+                while nome_cenario_atual not in cenarios:
+                     nome_cenario_atual =input("essa escolha nao foi valida, decida outro ")
         else:
+            opcoes = cenario_atual['opcoes']
+            if len(opcoes) == 0:
+                print("Acabaram-se suas opções! Mwo mwo mwooooo...")
+                game_over = True
+            else:
 
             # Aluno B: substitua este comentário e a linha abaixo pelo código
-            # para pedir a escolha do usuário.
-            escolha = ""
 
-            if escolha in opcoes:
-                nome_cenario_atual = escolha
-            else:
-                print("Sua indecisão foi sua ruína!")
-                game_over = True
+                for k,v in cenario_atual["opcoes"].items():
+                    print("digite {0} para {1}".format(k,v))
+                escolha =input("qual sua escolha? ")
+                if escolha in opcoes:
+                    nome_cenario_atual = escolha
+                else:
+                    print("Sua indecisão foi sua ruína!")
+                    game_over = True
 
     print("Você morreu!")
 
 
 # Programa principal.
-if __name__ == "__main__":
+if _name_ == "_main_":
     main()
