@@ -2,6 +2,6 @@
 ------------------------------------------------
 
 Alunos: 
-- Bruno M. Silva, brunoms12@insper.edu.br
+- Bruno Meneghesso Silva, brunoms12@insper.edu.br
 - Laura Batman Perim, larabp@insper.edu.br
 

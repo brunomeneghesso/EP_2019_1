@@ -63,7 +63,6 @@ def main():
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
         # Aluno A: substitua este comentário pelo código para imprimir 
-        # o cenário atual.
 
         
         print(cenario_atual["titulo"])
@@ -101,5 +100,5 @@ def main():
 
 
 # Programa principal.
-if __name__ == "__main__":
+if _name_ == "_main_":
     main()
