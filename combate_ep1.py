@@ -36,4 +36,5 @@ else:
     for k,v in m['recompensas'].items:
         print('voce recebu {0} de {1}'.format(v,k))
         player[k]+=v
+    m['Hp']=Hp0
     #linha adicional necessária para fiture de item
