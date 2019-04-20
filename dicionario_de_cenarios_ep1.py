@@ -3,32 +3,28 @@
             "descricao": "Voce esta no saguao de entrada do insper",
             "opcoes": {
                 "andar professor": "Tomar o elevador para o andar do professor",
-                "biblioteca": "Ir para a biblioteca"
-                "auditorio":"ir para o auditorio"
+                "biblioteca": "Ir para a biblioteca",
+                "auditorio":"ir para o auditorio",
+                "quata":"sair do predio do insper" 
                 
             }
         },
         "andar professor": {
             "titulo": "Andar do desespero",
-            "descricao": "Voce chegou ao andar da sala do seu professor",
+            "descricao": "Voce chegou ao andar da sala do seu professor, mas nao o ve em lugar algum",
             "opcoes": {
-                "inicio": "Tomar o elevador para o saguao de entrada",
-                "professor": "Falar com o professor"
+                "inicio": "Tomar o elevador e procurar ele em outro local"
             }
-        },
-        "professor": {
-            "titulo": "O monstro do Python",
-            "descricao": "Voce foi pedir para o professor adiar o EP. "
-                         "O professor revelou que é um monstro disfarçado "
-                         "e devorou sua alma.",
-            "opcoes": {}
+        }
+                
         },
         "biblioteca": {
             "titulo": "Caverna da tranquilidade",
             "descricao": "Voce esta na biblioteca",
             "opcoes": {
                 "inicio": "Voltar para o saguao de entrada",
-                "ler um livro": "estudar para d-soft"
+                "ler um livro": "estudar para d-soft",
+                "salas de estudo": "ir para um aquario de estudo em grupo"
             }
       },
             "ler um livro":{
@@ -37,55 +33,44 @@
             }
       }, 
             "auditorio":{
-                    "titulo": "auditorio"
+                    "titulo": "salao do espetaculo"
                     "descrição" : "voce esta no auditorio do insper"
                     "opcoes":{
                             "inicio":"voltar para o saguao de entrada",
-                              " subir palco":"subir no palco do auditorio"
+                              "palco":"subir no palco do auditorio"
                               
                               
             }
                 
        },
                     "palco":{
-                            "titulo": "palco do audiotorio"
-                            "descricao": "voce esta no palco e apareceu um monstro"
+                            "titulo": "apresentacao de duelo"
+                            "descricao": "voce esta no palco e apareceu um inimigo"
                             "opcoes":{
-                                    "inicio":"para descer tera que lutar contra o inimigo"
+                                    "inicio":"para descer tera que derrotar seu adversario"
              }
       },
-                    "quadra":{
-                            "titulo":"quadra do insper"
-                            "descricao":"voce esta na quadra"
-                            "opcoes":{
-                                    "inicio":"tomar o elevador para ir para o saguao de entrada"
-            }
-     },
                     "salas de estudo":{
                             "titulo":"aquario"
                             "descricao": "voce esta na sala de estudo em grupo"
                             "opcoes":{
-                                    "biblioteca":"voltar para a biblioteca"
-                                    "estudar":"estudar para alguma materia qualquer"
+                                    "biblioteca":"voltar para a biblioteca",
+                                    "ler um livro":"estudar para alguma materia qualquer"
                             
            }
     },
-                            "estudar":{
-                                    "titulo":"sala de teletransporte"
-                                    "descricao":"voce encontrou sala de teletransporte, daqui voce pode escolher qualquer lugar para ir, parabéns"}
-            }
-    },
+   
                             "terraco":{
-                                    "titulo":"terraco insper"
+                                    "titulo":"terraco do fim"
                                     "descricao":"voce esta no terraco do insper"
                                     "opcoes":{
-                                            "cafe":"sair do terraco"
-                                            "raul":"o professor esta no terraco,lute com ele para tentar adiar o trabalho"
+                                            "cafe":"ir tomar um cafe no sexto andar",
+                                            "raul":"o professor esta no terraco, lute com ele para tentar adiar o trabalho"
              }
    },         
                             "cafe":{
-                                    "titulo":"cafe novo do insper"
-                                    "descricao":"voce esta no refeitorio do insper"
+                                    "titulo":"salao do banquete"
+                                    "descricao":"voce pede um cafe"
                                      "opcoes":{
                                              "quata":"sair do predio"
                                              "terraco":"voltar para o terraco"
@@ -110,43 +95,47 @@
             }
     },  
                                    "fablab":{
-                                           "titulo":"fablab"
-                                           "descricao":"voce esta em um dos laboratorios do insper"
+                                           "titulo":"laboratori da producao incansavel"
+                                           "descricao":"voce esta em no FabLab do insper"
                                            "opcoes":{
-                                                   "quata":"sair do predio"
+                                                   "quata":"sair do predio",
                                                    "terraco": "subir para o terraco  do insper"
-                                                   "inventario":"pegar um item para melhorar o seu desempenho nas lutas"
+                                                   
              }
-    }, 
-                                 "inventario":{
-                                         "titulo":"objeto para te ajudar a lutar"
-                                         "descricao":"com o objeto o seu desempenho nas batalhas sera melhor"
-             }
-                                 
-    },                            "predio 1":{
-                                          "titulo": "predio 1"
-                                          "descricao": "predio velho do insper"
-                                          "opcaoes":{
-                                                  "inicio":"ir para a entrada"
-                                                  
-            }                    
+    },
+                                   "predio 1":{
+                                          "titulo": "o anciao"
+                                          "descricao": "voce esta no predio velho do insper",
+                                          "opcaoes": {
+                                                     "andar professor": "Tomar o elevador para o andar do professor",
+                                                     "biblioteca": "Ir para a biblioteca",
+                                                     "auditorio":"ir para o auditorio",
+                                                     "quata":"voltar para a rua" 
+                
+            }
+        },                    
                                     
     },   
                                  "predio 2":{
-                                         "titulo":"predio 2"
-                                         "descricao":"predio novo do insper"
+                                         "titulo":"o novato"
+                                         "descricao":"voce esta no predio novo do insper"
                                          "opcoes":{
-                                                 "fablab":"tomar o elevador para ir para o fablab"
-                                                 "terraco":"tomar o elevador para ir para o terraco"
+                                                 "fablab":"tomar o elevador para ir para o fablab",
+                                                 "terraco":"tomar o elevador para ir para o terraco",
                                                  "sala de aula":"tomar o elevador para a sala de aula"
+                                                 "quata":"voltar para a rua"
             }
      },                            
                                 "sala de aula":{
-                                        "titulo":"sala de aula 111"
+                                        "titulo":"sala 111"
                                         "descricao":"voce esta na sala de aula"
                                         "opcao":{
                                                 "predio 2":"tomar o elevador para descer para a entrada do predio"
-           }
+           },
+                                "casa":{
+                                        "titulo":"aceitar seu destino",
+                                        "descricao":"voce usou o teleporte para voltar para casa e desistiu do EP1",
+                                        "opcoes":{}
     }
                             
             
