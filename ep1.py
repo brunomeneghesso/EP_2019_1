@@ -3,7 +3,8 @@
 # Alunos: 
 # - aluno A: Fulano da Silva, fulanos@insper.edu.br
 # - aluno B: Sicrano de Almeida, sicranoa1@insper.edu.br
-
+import time
+import random
 def carregar_cenarios():
     cenarios = {
         "inicio": {
@@ -58,7 +59,8 @@ def main():
     print()
 
     cenarios, nome_cenario_atual = carregar_cenarios()
-    
+   
+    win=False
     game_over = False
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
@@ -69,11 +71,7 @@ def main():
         print("-"*len(cenario_atual["titulo"]))
         print(cenario_atual["descricao"])
         
-        """
-        titulo
-        ----
-        descricao
-        """
+        
         if nome_cenario_atual=="ler um livro":
                 nome_cenario_atual=input("escolha um lugar do insper para ir ")
                 while nome_cenario_atual not in cenarios:
@@ -95,9 +93,15 @@ def main():
                 else:
                     print("Sua indecisão foi sua ruína!")
                     game_over = True
-
-    print("Você morreu!")
-
+    if win==True:
+        print('você conseguiu adiar o EP1, mição completa')
+        time.sleep(10)
+        print('CONTINUA NO EP FINAL')       
+    else:
+        if player['Hp']<=0: 
+            print('você foi derrotado pelo {0}'.format(m))
+        print('sua falha fez com que o prazo do EP não fosse adiado')
+        print('aproveite a DP de D soft')
 
 # Programa principal.
 if _name_ == "_main_":
