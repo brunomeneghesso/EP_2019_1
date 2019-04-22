@@ -38,7 +38,6 @@ rolagem=random. rendint(0,100)
 if rolagem<=cenario_atual['probabilidade']:
     monstro=random.choice(cenario_atual['monstros possiveis'])
     combate=True
-   
 if combate:
     if monstro=='Raul':
         print('Raul: então você quer atrasar a entrega do EP!?')
@@ -53,7 +52,16 @@ if combate:
     print("ataque do inimigo {0}, seu ataque{1}".format(m["atk"],player["atk"]))
     print("defesa do inimigo {0}, sua defesa{1}".format(m["def"],player["def"]))
     print("vida do inimigo {0}, sua vida{1}".format(m["Hp"],player["Hp"]))
+    bonus={}
+    for v in inventario.values():
+        for k,v2 in v['modificacoes']:
+            if k not in bonus:
+                bonus[k]=v2
+            else:
+                bonus[k]+=v2
+    player['Hp']+=bonus['Hp']
     while player["Hp"]>0 and m["Hp"]>0:
+        player['Hp']+=bonus['cura']
         print('seus ataques são:')
         for k,v in player["ataques"].items():
             print("{0} precisão:{1}, dano:{2}".format(k,v[0],v[1]))
@@ -62,7 +70,7 @@ if combate:
             At=input("este nao e um ataque valido, insira um que seja ")
         chance=randon.rendint(1,10)
         if chance<player['ataques'][Atp][0]:
-            perda=(player['ataques'][Atp][1]*player["atk"]-m["def"])
+            perda=(player['ataques'][Atp][1]*(player["atk"]+bonus['atk'])-m["def"])
             if perda>0:
                 m['Hp']-=perda
                 print('voce atacou o  {0} com {1}, a vida dele esta em{2}'.format(m,At,m["Hp"]))
@@ -71,7 +79,7 @@ if combate:
         Atm=random.choice(m["ataques"])
         chance=randon.rendint(1,10)
         if chance<m['ataques'][Atp][0]:
-            perda=(m['ataques'][Atm][1]*m["atk"]-player["def"])
+            perda=(m['ataques'][Atm][1]*m["atk"]-(player["def"]+bonus['def']))
             if perda>0:
                 player['Hp']-=perda
             print('{0} atacou voce com {1}, a sua vida esta em{2}'.format(m,At,player["Hp"]))
