@@ -54,7 +54,7 @@ if combate:
     print("vida do inimigo {0}, sua vida{1}".format(m["Hp"],player["Hp"]))
     bonus={}
     for v in inventario.values():
-        for k,v2 in v['modificacoes']:
+        for k,v2 in v['modificacoes'].items():
             if k not in bonus:
                 bonus[k]=v2
             else:
