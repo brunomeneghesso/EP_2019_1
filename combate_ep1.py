@@ -75,7 +75,9 @@ if combate:
                 m['Hp']-=perda
                 print('voce atacou o  {0} com {1}, a vida dele esta em{2}'.format(m,At,m["Hp"]))
             else:
-                print('voce errou o ataque')
+                print('nao suriu efeito')
+        else:
+            print('voce errou o ataque')
         Atm=random.choice(m["ataques"])
         chance=randon.rendint(1,10)
         if chance<m['ataques'][Atp][0]:
