@@ -2,7 +2,7 @@ itens={'espada':{'descricao':'aumenta o dano de ataque','modificacoes':{'atk':5}
 inventario={}
 
 
-if cenario_atual['item'] not in itens:
+if cenario_atual['item'] not in inventario:
     inventario[cenario_atual[itens]]=itens[cenario_atual['itens']]
     for k,v in inventario:
         print("agora voce tem{0}{1}".format(cenario_atual['itens'],itens[cenario_atual['itens']['descricao']]))
