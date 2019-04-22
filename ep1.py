@@ -158,7 +158,7 @@ def carregar_cenarios():
                                 "sala de aula":{
                                         "titulo":"sala 111"
                                         "descricao":"voce esta na sala de aula"
-                                        "opcao":{
+                                        "opcoes":{
                                                 "predio 2":"tomar o elevador para descer para a entrada do predio"
            },
                                          "probabilidade":100,
