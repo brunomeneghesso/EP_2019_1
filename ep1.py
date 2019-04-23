@@ -92,8 +92,8 @@ def carregar_cenarios():
                                     "opcoes":{
                                             "cafe":"ir tomar um cafe no sexto andar",
                                             "raul":"o professor esta no terraco, lute com ele para tentar adiar o trabalho",
-                                               "requisito":''
              },
+                "requisito":'',
                             'probabilidade':80,
                             "monstros possiveis":['veterano lv2','faxineiro lv2','aluno de ADM/ECO lv2']
    },         
@@ -103,13 +103,13 @@ def carregar_cenarios():
                                      "opcoes":{
                                              "quata":"sair do predio",
                                              "terraco":"voltar para o terraco",
-                                             "itens":'forca',
-                                             "itens":'bonus',
-                                       "requisito":''
+
             },
-                                    'probabilidade':80,2']
+                                             "itens":['forca','bebida revigorante'],
+                                       "requisito":'',
+                                    'probabilidade':80
    },        
-                                    "monstros possiveis":['veterano lv2','faxineiro lv2','aluno de ADM/ECO lv2']
+                                    "monstros possiveis":['veterano lv2','faxineiro lv2','aluno de ADM/ECO lv2'],
                             
                             "raul":{
                                     "titulo":"professor raul",
@@ -117,19 +117,18 @@ def carregar_cenarios():
                                     "opcoes":{"acabar com isso":"voce se sente pronto, esta na hora de encarar seu ultimo desafio"},
                                     'probabilidade':100,
                                     'monstros possiveis':['Raul'],
-                                       "requisito":''
                         
             },
-                           
+                                    "requisito":'',                           
                            "quata":{
                                    "titulo":"rua quata",
                                    "descrição": " voce esta na rua do insper",
                                    "opcoes":{
                                            "predio 1": "ir para o predio velho",
                                            "predio 2":"ir para o predio novo",
-                                    "requisito":''
             },
-                                   'probabilidade':80,
+                                    "requisito":'',
+                                    'probabilidade':80,
                                    "monstros possiveis":['veterano','faxineiro','aluno de ADM/ECO','veterano lv2','faxineiro lv2','aluno de ADM/ECO lv2']
     },  
                                    "fablab":{
@@ -141,7 +140,9 @@ def carregar_cenarios():
                                                    "itens":'espada',
                                             "requisito":''
              },
-                                            'probabilidade':100
+                                                  "itens":'espada',
+                                            "requisito":'',
+                                            'probabilidade':100,
                                             'monstros possiveis':['tecnivo de corte a laser','tecnico de 3D']
     },
                                    "predio 1":{
@@ -151,46 +152,43 @@ def carregar_cenarios():
                                                      "andar professor": "Tomar o elevador para o andar do professor",
                                                      "biblioteca": "Ir para a biblioteca",
                                                      "auditorio":"ir para o auditorio",
-                                                     "quata":"sair para a rua",
-                                          "requisito":''
-                
+                                                     "quata":"sair para a rua",                
             },
+                                        "requisito":'',
                                             "probabilidade":70,
                                             "monstros possiveis":['veterano','faxineiro','aluno de ADM/ECO']
                                           
         },                    
-                                    
-    },   
+                                       
                                  "predio 2":{
-                                         "titulo":"local inovado"
-                                         "descricao":"voce esta no predio novo do insper"
+                                         "titulo":"local inovado",
+                                         "descricao":"voce esta no predio novo do insper",
                                          "opcoes":{
                                                  "fablab":"tomar o elevador para ir para o fablab",
                                                  "terraco":"tomar o elevador para ir para o terraco",
-                                                 "sala de aula":"tomar o elevador para a sala de aula"
+                                                 "sala de aula":"tomar o elevador para a sala de aula",
                                                  "quata":"sair para a rua",
-                                        "requisito":''
             },
+                                        "requisito":'',
                                      "probabilidade":70,
                                      "monstros possiveis":['veterano lv2','faxineiro lv2','aluno de ADM/ECO lv2']
      },                            
                                 "sala de aula":{
-                                        "titulo":"sala 111"
-                                        "descricao":"voce esta na sala de aula"
-                                        "opcao":{
-                                                "predio 2":"tomar o elevador para descer para a entrada do predio",
-                                                "itens":'armadura',
-                                        "requisito":''
+                                        "titulo":"sala 111",
+                                        "descricao":"voce esta na sala de aula",
+                                        "opcoes":{
+                                                "predio 2":"tomar o elevador para descer para a entrada do predio"
            },
+                                        "itens":'armadura',
+                                        "requisito":'',
                                          "probabilidade":100,
-                                         "monstros possiveis":['veterano lv2','faxineiro lv2','aluno de ADM/ECO lv2']
+                                         "monstros possiveis":['veterano lv2','faxineiro lv2','aluno de ADM/ECO lv2']},
                                 "casa":{
                                         "titulo":"aceitar seu destino",
                                         "descricao":"voce usou o teleporte para voltar para casa e desistiu do EP1",
-                                        "opcoes":{}
-                                         "requisito":''
-    
-                              itens={'espada':{'descricao':'aumenta o dano de ataque','atk':5},'chave auditorio':{'descricao':'permite acesso ao auditorio','modificacoes':[]},'forca':{'descricao':'aumenta o poder de ataque','modificacoes':'atk':6},'armadura':{'descricao':'aumenta a protecao','modificacoes':{'def':5}},'bonus':{'descricao':'funcoes adicionais ','modificacoes':'atk def Hp ou cura': 4}}
+                                        "opcoes":{},
+                                         "requisito":''}}  
+    itens={'poder da criacao':{'descricao':'o mais poderoso item defensivo','modificacoes':{'def':200}},'armadura de PLA':{'descricao':'um item fabricado para a defesa','modificacoes':{'def':25}},'laser de corte':{'descricao':'a mais poderosa arma ofensiva','modificacoes':{'atk':100}},'espada de mdf':{'descricao':'um equipamento fabricado para o combate','modificacoes':{'atk':10}},'traje ninja':{'descricao':'um traje que oculta a sua presenca e outras surpresas','modificacoes':{'Hp':20,'atk':10}},'traje de glaiador':{'descricao':'um traje que revela sua ferossidade','modificacoes':{'def':20,'cura':5}},'calculadora cientifica':{'descricao':'te defende das contas dificeis','modificacoes':{'def':10}},'vassoura':{'descricao':'usada para ataques de medio alcanse','modificacoes':{'atk':10}},'caderno doproximo semestre':{'descricao':'o caderno de um veterano, te consede um bonus de vida no inico do co mbate', 'modificacoes':{'Hp':30}},'espada':{'descricao':'aumenta o dano de ataque','modificacoes':{'atk':5}},'chave auditorio':{'descricao':'permite acesso ao auditorio','modificacoes':{}},'forca':{'descricao':'aumenta o poder de ataque','modificacoes':{'atk':10}},'armadura':{'descricao':'aumenta a protecao','modificacoes':{'def':15}},'bebida revigorante':{'descricao':'funcoes adicionais ','modificacoes':{'cura': 5}}}
                               
 
 
@@ -199,38 +197,49 @@ def carregar_cenarios():
     player={"Hp":100,"atk":5,"def":10,"ataques":{'soco':[90,4],'chute na coxa':[70,8],'chute cabeca':[30,15]}}
     lista_monstros={'veterano':{"Hp":50,"atk":3,"def":15,
                             "ataques":{'soco':[90,4],'chute costela':[60,8]},
-                            'recompensas':{"Hp":30,"atk":1,"def": 1}},
+                            'recompensas':{"Hp":30,"atk":1,"def": 1},
+                            'loot':{'caderno do proximo semestre':30}},
                 'faxineiro':{'Hp':40,'atk':6,'def':10,
                              'ataques':{'vassourada':[70,6],'jogar o carrinho':[50,10]},
-                             'recompensas':{'Hp':40,'atk':3,'def':1}},
+                             'recompensas':{'Hp':40,'atk':3,'def':1},
+                             'loot':{'vassoura':30}},
                 'aluno de ADM/ECO':{'Hp':70,'atk':2,'def':20,
                                     'ataques':{'reclamar do grupo':[100,3],'tapa':[80,5]},
-                                    'recompensas':{'Hp':30,'atk':1,'def':5}},
+                                    'recompensas':{'Hp':30,'atk':1,'def':5},
+                                    'loot':{'calculadora cientifica':30}},
                 'cosplayer de gladiador':{'Hp':100,'atk':4,'def':20,
                                           'ataques':{'clava':[30,12],'chute frontal':[40,10],'ombrada':[50,8]},
-                                          'recompensa':{'Hp':50,'atk':3,'def':5}},
+                                          'recompensa':{'Hp':50,'atk':3,'def':5},
+                                          'loot':{'traje de gladiador':20}},
                 'cosplayer de ninja':{'Hp':70,'atk':10,'def':5,
                                       'ataques':{'katana':[75,7],'adaga':[85,6],'shuriken':[100,5]},
-                                      'recompensas':{'Hp':70,'atk':6,'def':2}},
+                                      'recompensas':{'Hp':70,'atk':6,'def':2},
+                                      'loot':{'traje ninja':20}},
                 'tecnivo de corte a laser':{'Hp':100,'atk':25,'def':30,
                                             'ataques':{'espada de acrilico':[90,5],'porrete de mdf':[75,8],'caixa de papelao':[100,2],'laser cortante':[20,15]},
-                                            'recompensas':{'Hp':80,'atk':10,'def':0}},
+                                            'recompensas':{'Hp':80,'atk':10,'def':0},
+                                            'loot':{'espada de mdf':60,'laser de corte':10}},
                 'tecnico de 3D':{'Hp':150,'atk':12,'def':50,
                                  'ataques':{'chicote de filamento':[80,5],'espinhos de pet-G':[70,6],'caxao de de pla':[30,15]},
-                                 'recompensas':{'Hp':70,'atk':0,'def':15}},
+                                 'recompensas':{'Hp':70,'atk':0,'def':15},
+                                 'loot':{'armadura de PlA':60,'poder da criacao':10}},
                 'veterano lv2':{"Hp":120,"atk":15,"def":40,
                             "ataques":{'soco':[90,6],'chute costela':[60,10]},
-                            'recompensas':{"Hp":60,"atk":2,"def": 2}},
+                            'recompensas':{"Hp":60,"atk":2,"def": 2},
+                            'loot':{}},
                 'faxineiro lv2':{'Hp':120,'atk':20,'def':30,
                              'ataques':{'vassourada':[70,6],'jogar o carrinho':[50,10]},
-                             'recompensas':{'Hp':70,'atk':3,'def':1}},
+                             'recompensas':{'Hp':70,'atk':3,'def':1},
+                             'loot':{}},
                 'aluno de ADM/ECO lv2':{'Hp':160,'atk':4,'def':50,
                                     'ataques':{'reclamar do grupo':[100,6],'tapa':[80,10]},
-                                    'recompensas':{'Hp':30,'atk':1,'def':5}},
+                                    'recompensas':{'Hp':30,'atk':1,'def':5},
+                                    'loot':{}},
                 'Raul':{'Hp':500,'atk':50,'def':100,
-                        'ataques':{'nota da PI':[100,8],'o codigo das 1001 linhas':[75,15],'funcao de dano':[100,(0.5*player['Hp']+player['def'])/Raul['atk']],'inception de dicionarios':[50,20],'Prazo inadiavel':[100,20]},
-                        'recompensas':{}}}        
-    nome_cenario_atual = "inicio"
+                        'ataques':{'nota da PI':[100,8],'o codigo das 1001 linhas':[75,15],'funcao de dano':[100,(0.5*player['Hp']+player['def'])/'Raul'['atk']],'inception de dicionarios':[50,20],'Prazo inadiavel':[100,20]},
+                        'recompensas':{},
+                        'loot':{}}}        
+    nome_cenario_atual="inicio"
 
     return cenarios, nome_cenario_atual,player,lista_monstros,itens
 
@@ -247,7 +256,7 @@ def main():
         "adiamento do EP (boa sorte...)")
     print()
 
-    cenarios, nome_cenario_atual = carregar_cenarios()
+    cenarios, nome_cenario_atual,player,lista_monstros,itens = carregar_cenarios()
    
     win=False
     game_over = False
@@ -263,20 +272,20 @@ def main():
         
         
     if cenario_atual['item'] not in itens:
-       inventario[cenario_[itens]]=itens[cenario_atual['itens']]
-        for k,v in inventario:
-            print("agora voce tem{0}{1}".format(cenario_atual['itens'],itens[cenario_atuar['itens']['descricao']]))
+       inventario[cenario_atual[itens]]=itens[cenario_atual['itens']]
+       for k,v in inventario:
+            print("agora voce tem{0}{1}".format(cenario_atual['itens'],itens[cenario_atual['itens']['descricao']]))
             print ("itens")
 
 
 
         
         
-        if nome_cenario_atual=="ler um livro":
+    if nome_cenario_atual=="ler um livro":
                 nome_cenario_atual=input("escolha um lugar do insper para ir ")
                 while nome_cenario_atual not in cenarios:
                      nome_cenario_atual =input("essa escolha nao foi valida, decida outro ")
-        else:
+    else:
             opcoes = cenario_atual['opcoes']
             if len(opcoes) == 0:
                 print("Acabaram-se suas opções! Mwo mwo mwooooo...")
@@ -289,7 +298,10 @@ def main():
                     print("digite {0} para {1}".format(k,v))
                 escolha =input("qual sua escolha? ")
                 if escolha in opcoes:
-                    nome_cenario_atual = escolha
+                    if cenarios[escolha]['requisito'] in inventario:
+                        nome_cenario_atual = escolha
+                    else:
+                        print('voce precisa do item {0} para entrar nessa sala'.format(cenarios[escolha]['requisito']))
                 else:
                     print("Sua indecisão foi sua ruína!")
                     game_over = True
@@ -313,53 +325,70 @@ def main():
                         print("ataque do inimigo {0}, seu ataque{1}".format(m["atk"],player["atk"]))
                         print("defesa do inimigo {0}, sua defesa{1}".format(m["def"],player["def"]))
                         print("vida do inimigo {0}, sua vida{1}".format(m["Hp"],player["Hp"]))
+                        bonus={}
+                        for v in inventario.values():
+                            for k,v2 in v['modificacoes'].items():
+                                if k not in bonus:
+                                    bonus[k]=v2
+                                else:
+                                    bonus[k]+=v2
+                        player['Hp']+=bonus['Hp']
                         while player["Hp"]>0 and m["Hp"]>0:
+                            player['Hp']+=bonus['cura']
                             print('seus ataques são:')
                             for k,v in player["ataques"].items():
                                 print("{0} precisão:{1}, dano:{2}".format(k,v[0],v[1]))
                             Atp=input("qual ataque voce quer dar? ")
-                                while Atp not in player["ataques"]:
-                            At=input("este nao e um ataque valido, insira um que seja ")
-                            chance=randon.rendint(1,10)
+                            while Atp not in player["ataques"]:
+                                At=input("este nao e um ataque valido, insira um que seja ")
+                            chance=random.rendint(1,10)
                             if chance<player['ataques'][Atp][0]:
-                                perda=(player['ataques'][Atp][1]*player["atk"]-m["def"])
+                                perda=(player['ataques'][Atp][1]*(player["atk"]+bonus['atk'])-m["def"])
                                 if perda>0:
                                     m['Hp']-=perda
                                     print('voce atacou o  {0} com {1}, a vida dele esta em{2}'.format(m,At,m["Hp"]))
+                                else:
+                                    print('nao suriu efeito')
                             else:
                                 print('voce errou o ataque')
                             Atm=random.choice(m["ataques"])
-                            chance=randon.rendint(1,10)
+                            chance=random.rendint(1,10)
                             if chance<m['ataques'][Atp][0]:
-                                perda=(m['ataques'][Atm][1]*m["atk"]-player["def"])
+                                perda=(m['ataques'][Atm][1]*m["atk"]-(player["def"]+bonus['def']))
                                 if perda>0:
                                     player['Hp']-=perda
                                     print('{0} atacou voce com {1}, a sua vida esta em{2}'.format(m,At,player["Hp"]))
-                                else:
-                                    print('o inimigo tentou atacar voce com {0}, mas errou'.format(Atm))
-                                    if player['Hp']<=0:
-                                        print('voce foi derrotado pelo {0}'.format(m))
-                                        game_over=True
-                                    else:
-                                        if monstro=='Raul':
-                                            print('Raul: Impossivel! Como um ser inferior conseguiu me ferir')
-                                            time.sleep(0.5)
-                                            print('Parabés seu verme insolente, você foi capaz de superar 1% do meu poder.')
-                                            time.sleep(0.5)
-                                            print('como prova de seu feito adiarei a entrega do EP1')
-                                            time.sleep(0.5)
-                                            print('mas não terei tanta misericórdia no EP final')
-                                            time.sleep(0.5)
-                                            print('esteja pronto')
-                                            game_over=True
-                                            win=True
-                                        else:
-                                            print('voce derrotou o {0}, aqui estão seus premios'.format(m))
-                                            for k,v in m['recompensas'].items:
-                                                print('voce recebu {0} de {1}'.format(v,k))
-                                                player[k]+=v
-                                        m['Hp']=Hp0
-                                        combate=False    
+                            else:
+                                print('o inimigo tentou atacar voce com {0}, mas errou'.format(Atm))
+                        if player['Hp']<=0:
+                            print('voce foi derrotado pelo {0}'.format(m))
+                            game_over=True
+                        else:
+                            if monstro=='Raul':
+                                print('Raul: Impossivel! Como um ser inferior conseguiu me ferir')
+                                time.sleep(0.5)
+                                print('Parabés seu verme insolente, você foi capaz de superar 1% do meu poder.')
+                                time.sleep(0.5)
+                                print('como prova de seu feito adiarei a entrega do EP1')
+                                time.sleep(0.5)
+                                print('mas não terei tanta misericórdia no EP final')
+                                time.sleep(0.5)
+                                print('esteja pronto')
+                                game_over=True
+                                win=True
+                            else:
+                                print('voce derrotou o {0}, aqui estão seus premios'.format(m))
+                                for k,v in m['recompensas'].items:
+                                    print('voce recebu {0} de {1}'.format(v,k))
+                                    player[k]+=v
+                                    m['Hp']=Hp0
+                                ganho=random.choice(m['loot'])
+                                chance=random.randint(1,100)
+                                if chance<m['loot'][ganho]:
+                                    if ganho not in inventario:
+                                        inventario[ganho]=itens[ganho]
+                                        print('voce conseguiu o item {0} do monstro'.format(ganho))
+                                combate=False    
     if win==True:
         print('você conseguiu adiar o EP1, mição completa')
         time.sleep(10)
