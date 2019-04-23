@@ -14,7 +14,8 @@ def carregar_cenarios():
                 "andar professor": "Tomar o elevador para o andar do professor",
                 "biblioteca": "Ir para a biblioteca",
                 "auditorio":"ir para o auditorio",
-                "quata":"sair do predio do insper" 
+                "quata":"sair do predio do insper",
+                "requisito":''
                 
             },
             "probabilidade":30,
@@ -24,7 +25,8 @@ def carregar_cenarios():
             "titulo": "Andar do desespero",
             "descricao": "Voce chegou ao andar da sala do seu professor, mas nao o ve em lugar algum",
             "opcoes": {
-                "inicio": "Tomar o elevador e procurar ele em outro local"
+                "inicio": "Tomar o elevador e procurar ele em outro local",
+             "requisito":''
             },
             "probabilidade":50,
             "monstros possiveis":['veterano','faxineiro','aluno de ADM/ECO']
@@ -35,7 +37,10 @@ def carregar_cenarios():
             "opcoes": {
                 "inicio": "Voltar para o saguao de entrada",
                 "ler um livro": "estudar para d-soft",
-                "salas de estudo": "ir para um aquario de estudo em grupo"
+                "salas de estudo": "ir para um aquario de estudo em grupo",
+            "itens":'chave auditorio',
+             "requisito":''
+            
             },
                 'probabilidade':10,
                 "monstros possiveis":['veterano','faxineiro','aluno de ADM/ECO']
@@ -49,7 +54,8 @@ def carregar_cenarios():
                     "descrição" : "voce esta no auditorio do insper",
                     "opcoes":{
                             "predio1":"voltar para o saguao de entrada",
-                              "palco":"subir no palco do auditorio"
+                             "palco":"subir no palco do auditorio",
+                              "requisito":"chave auditorio"
                               
                               
             },
@@ -61,17 +67,20 @@ def carregar_cenarios():
                             "titulo": "apresentacao de duelo",
                             "descricao": "voce esta no palco e apareceu um inimigo",
                             "opcoes":{
-                                    "auditorio":"para descer tera que derrotar seu adversario"
+                                    "auditorio":"para descer tera que derrotar seu adversario",
+                                     "requisito":''
              },
                             'probabilidade':100,
                             'mostros possiveis':['cosplayer de gladiador','cosplayer de ninja']
+                            
       },
                     "salas de estudo":{
                             "titulo":"aquario",
                             "descricao": "voce esta na sala de estudo em grupo",
                             "opcoes":{
                                     "biblioteca":"voltar para a biblioteca",
-                                    "ler um livro":"estudar para alguma materia qualquer"                                                        
+                                    "ler um livro":"estudar para alguma materia qualquer",
+                            "requisito":''                                                       
            },
                             'probabilidade':30,
                             "monstros possiveis":['veterano','faxineiro','aluno de ADM/ECO']
@@ -82,7 +91,8 @@ def carregar_cenarios():
                                     "descricao":"voce esta no terraco do insper",
                                     "opcoes":{
                                             "cafe":"ir tomar um cafe no sexto andar",
-                                            "raul":"o professor esta no terraco, lute com ele para tentar adiar o trabalho"
+                                            "raul":"o professor esta no terraco, lute com ele para tentar adiar o trabalho",
+                                               "requisito":''
              },
                             'probabilidade':80,
                             "monstros possiveis":['veterano lv2','faxineiro lv2','aluno de ADM/ECO lv2']
@@ -92,7 +102,10 @@ def carregar_cenarios():
                                     "descricao":"voce pede um cafe",
                                      "opcoes":{
                                              "quata":"sair do predio",
-                                             "terraco":"voltar para o terraco"
+                                             "terraco":"voltar para o terraco",
+                                             "itens":'forca',
+                                             "itens":'bonus',
+                                       "requisito":''
             },
                                     'probabilidade':80,2']
    },        
@@ -103,7 +116,8 @@ def carregar_cenarios():
                                     "descricao":"voce achou o professor, agora precisa lutar com ele para adiar o trabalho",
                                     "opcoes":{"acabar com isso":"voce se sente pronto, esta na hora de encarar seu ultimo desafio"},
                                     'probabilidade':100,
-                                    'monstros possiveis':['Raul']
+                                    'monstros possiveis':['Raul'],
+                                       "requisito":''
                         
             },
                            
@@ -112,7 +126,8 @@ def carregar_cenarios():
                                    "descrição": " voce esta na rua do insper",
                                    "opcoes":{
                                            "predio 1": "ir para o predio velho",
-                                           "predio 2":"ir para o predio novo"
+                                           "predio 2":"ir para o predio novo",
+                                    "requisito":''
             },
                                    'probabilidade':80,
                                    "monstros possiveis":['veterano','faxineiro','aluno de ADM/ECO','veterano lv2','faxineiro lv2','aluno de ADM/ECO lv2']
@@ -122,7 +137,9 @@ def carregar_cenarios():
                                            "descricao":"voce esta em no FabLab do insper",
                                            "opcoes":{
                                                    "quata":"sair do predio",
-                                                   "terraco": "subir para o terraco  do insper"                                      
+                                                   "terraco": "subir para o terraco  do insper"   ,
+                                                   "itens":'espada',
+                                            "requisito":''
              },
                                             'probabilidade':100
                                             'monstros possiveis':['tecnivo de corte a laser','tecnico de 3D']
@@ -134,7 +151,8 @@ def carregar_cenarios():
                                                      "andar professor": "Tomar o elevador para o andar do professor",
                                                      "biblioteca": "Ir para a biblioteca",
                                                      "auditorio":"ir para o auditorio",
-                                                     "quata":"sair para a rua" 
+                                                     "quata":"sair para a rua",
+                                          "requisito":''
                 
             },
                                             "probabilidade":70,
@@ -150,7 +168,8 @@ def carregar_cenarios():
                                                  "fablab":"tomar o elevador para ir para o fablab",
                                                  "terraco":"tomar o elevador para ir para o terraco",
                                                  "sala de aula":"tomar o elevador para a sala de aula"
-                                                 "quata":"sair para a rua"
+                                                 "quata":"sair para a rua",
+                                        "requisito":''
             },
                                      "probabilidade":70,
                                      "monstros possiveis":['veterano lv2','faxineiro lv2','aluno de ADM/ECO lv2']
@@ -158,8 +177,10 @@ def carregar_cenarios():
                                 "sala de aula":{
                                         "titulo":"sala 111"
                                         "descricao":"voce esta na sala de aula"
-                                        "opcoes":{
-                                                "predio 2":"tomar o elevador para descer para a entrada do predio"
+                                        "opcao":{
+                                                "predio 2":"tomar o elevador para descer para a entrada do predio",
+                                                "itens":'armadura',
+                                        "requisito":''
            },
                                          "probabilidade":100,
                                          "monstros possiveis":['veterano lv2','faxineiro lv2','aluno de ADM/ECO lv2']
@@ -167,7 +188,19 @@ def carregar_cenarios():
                                         "titulo":"aceitar seu destino",
                                         "descricao":"voce usou o teleporte para voltar para casa e desistiu do EP1",
                                         "opcoes":{}
-    }}
+                                         "requisito":''
+    
+                              itens={'espada':{'descricao':'aumenta o dano de ataque','atk':5},'chave auditorio':{'descricao':'permite acesso ao auditorio','modificacoes':[]},'forca':{'descricao':'aumenta o poder de ataque','modificacoes':'atk':6},'armadura':{'descricao':'aumenta a protecao','modificacoes':{'def':5}},'bonus':{'descricao':'funcoes adicionais ','modificacoes':'atk def Hp ou cura': 4}}
+                              
+                              
+    if cenario_atual['item'] not in itens:
+       inventario[cenario_[itens]]=itens[cenario_atual['itens']]
+        for k,v in inventario:
+            print("agora voce tem{0}{1}".format(cenario_atual['itens'],itens[cenario_atuar['itens']['descricao']]))
+            print ("itens")
+
+
+
                             
     player={"Hp":100,"atk":5,"def":10,"ataques":{'soco':[90,4],'chute na coxa':[70,8],'chute cabeca':[30,15]}}
     lista_monstros={'veterano':{"Hp":50,"atk":3,"def":15,
@@ -205,7 +238,7 @@ def carregar_cenarios():
                         'recompensas':{}}}        
     nome_cenario_atual = "inicio"
 
-    return cenarios, nome_cenario_atual,player,lista_monstros
+    return cenarios, nome_cenario_atual,player,lista_monstros,itens
 
 
 def main():
@@ -224,6 +257,7 @@ def main():
    
     win=False
     game_over = False
+    inventario={}
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
         # Aluno A: substitua este comentário pelo código para imprimir 
